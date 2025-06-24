@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apex Legends 登录/注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 公共样式表 -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./images/屏幕截图 2025-06-24 185832.png" alt="Apex Legends Logo" class="apex-logo-img">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">英雄介绍</a></li>
+            <li><a href="media.html">精彩视频</a></li>
+            <li><a href="login.html">登录/注册</a></li>
+        </ul>
+    </nav>
+
+    <header class="about-banner">
+        <h1>用户登录 / 注册</h1>
+        <p>欢迎加入Apex Legends玩家社区！</p>
+    </header>
+
+    <section class="login-section">
+        <div class="form-container">
+            <form id="loginForm" autocomplete="off">
+                <h2>登录</h2>
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" name="username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="password" name="password" placeholder="请输入密码" required>
+                </div>
+                <button type="submit" class="btn">登录</button>
+            </form>
+            <form id="registerForm" autocomplete="off">
+                <h2>注册</h2>
+                <div class="form-group">
+                    <label>用户名</label>
+                    <input type="text" name="reg_username" placeholder="请输入用户名" required>
+                </div>
+                <div class="form-group">
+                    <label>邮箱</label>
+                    <input type="email" name="reg_email" placeholder="请输入邮箱" required>
+                </div>
+                <div class="form-group">
+                    <label>密码</label>
+                    <input type="password" name="reg_password" placeholder="请输入密码" required>
+                </div>
+                <button type="submit" class="btn">注册</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 返回首页按钮 -->
+    <div style="text-align:center; margin:40px 0;">
+        <a href="index.html" class="btn">返回首页</a>
+    </div>
+
+    <!-- 引入外部JS文件 -->
+    <script src="js/login.js"></script>
+</body>
+</html>

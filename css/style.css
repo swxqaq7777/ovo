@@ -1,0 +1,441 @@
+/* 基础重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #1a1a1a;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 保证 main 占满剩余空间 */
+main {
+  flex: 1;   /* 占满剩余空间 */
+  padding: 20px; /* 或你需要的内边距 */
+  box-sizing: border-box;
+  background: #222b; /* 示例背景，可选 */
+}
+
+/* 导航栏样式 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #101010;
+    padding: 10px 30px;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #e43c4e;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e43c4e;
+}
+
+/* Banner样式 */
+.banner {
+    background: url('../images/banner.jpg') center/cover no-repeat, linear-gradient(135deg, #2d2d2d90, #e43c4e70);
+    text-align: center;
+    padding: 80px 20px;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
+}
+
+.banner p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #e43c4e;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background 0.3s;
+    animation: fadeIn 2s;
+}
+
+.btn:hover {
+    background: #ff596a;
+}
+
+/* Banner动画 */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn {
+    from { opacity: 0;}
+    to { opacity: 1;}
+}
+
+/* 简介区块样式 */
+.intro-section {
+    margin: 40px auto;
+    max-width: 900px;
+    background: #222b;
+    border-radius: 18px;
+    padding: 36px 25px;
+    text-align: center;
+    box-shadow: 0 3px 20px #0007;
+    animation: fadeIn 2s;
+}
+.intro-section h2 {
+    color: #e43c4e;
+    margin-bottom: 18px;
+}
+.intro-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.intro-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.intro-icons div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.intro-icons span {
+    font-size: 1.05em;
+}
+
+/* 英雄介绍页样式补充 */
+.about-banner {
+    background: linear-gradient(135deg, #e43c4e90, #2d2d2d90);
+    text-align: center;
+    padding: 48px 10px 24px 10px;
+}
+.about-banner h1 {
+    margin-bottom: 12px;
+    font-size: 2.2em;
+    color: #fff;
+}
+.legends-section {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    flex-wrap: wrap;
+    margin: 32px auto 0 auto;
+    max-width: 1100px;
+}
+.legend-card {
+    background: #222c;
+    border-radius: 16px;
+    box-shadow: 0 3px 16px #0007;
+    width: 300px;
+    margin: 16px;
+    padding: 26px 20px 18px 20px;
+    text-align: center;
+    animation: fadeIn 1.5s;
+    transition: transform 0.3s, filter 0.3s;
+}
+.legend-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 8px 28px #e43c4e66;
+    filter: brightness(1.1);
+}
+.legend-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 4px solid #e43c4e;
+}
+.legend-card h2 {
+    color: #e43c4e;
+    margin-bottom: 10px;
+}
+.legend-card ul {
+    list-style: none;
+    margin-top: 10px;
+    padding: 0;
+}
+.legend-card li {
+    font-size: 1.07em;
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    justify-content: center;
+}
+
+/* 多媒体页样式补充 */
+.media-section {
+    margin: 32px auto;
+    max-width: 1100px;
+    padding: 0 10px;
+}
+.media-section h2 {
+    color: #e43c4e;
+    text-align: left;
+    margin-bottom: 18px;
+}
+.media-video-list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+.media-video-card {
+    background: rgba(43, 43, 43, 0.8);
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0008;
+    width: 320px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+.media-video-card video {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    background: #000;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+.media-audio-list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.media-audio-card {
+    background: rgba(71, 71, 71, 0.8);
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0008;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 10px;
+}
+.media-audio-card audio {
+    width: 180px;
+}
+.media-audio-card span {
+    font-size: 1.1em;
+}
+
+/* 登录注册页样式补充 */
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 32px 0;
+}
+.form-container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    background: rgba(53, 53, 53, 0.8);
+    border-radius: 16px;
+    box-shadow: 0 2px 16px #0007;
+    padding: 34px 26px;
+}
+form {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+form h2 {
+    color: #e43c4e;
+    margin-bottom: 8px;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+.form-group label {
+    font-weight: 500;
+    color: #fff;
+}
+.form-group input {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    background: #333;
+    color: #fff;
+    width: 100%;
+    font-size: 1.05em;
+    margin-top: 2px;
+}
+form .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1100px) {
+    .legends-section,
+    .media-video-list,
+    .media-audio-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+    .legend-card,
+    .media-video-card,
+    .media-audio-card {
+        width: 95%;
+        min-width: 220px;
+        max-width: 400px;
+    }
+}
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .banner h1 {
+        font-size: 1.5em;
+    }
+    .banner {
+        padding: 40px 10px;
+    }
+    .intro-section {
+        margin: 24px 4px;
+    }
+    .intro-icons {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .about-banner {
+        padding: 22px 4px 12px 4px;
+    }
+    .form-container {
+        flex-direction: column;
+        gap: 18px;
+        padding: 20px 8px;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.apex-logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+.logo-text {
+    color: #e43c4e;
+    font-size: 1.5em;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* 单一大视频展示专属样式 */
+.single-video-section {
+    margin: 48px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 340px;
+}
+.single-video-card {
+    background: #23271f;
+    border-radius: 22px;
+    box-shadow: 0 5px 32px #000a;
+    padding: 36px 32px 22px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    width: 90vw;
+}
+.main-video {
+    width: 800px;
+    max-width: 100%;
+    height: 450px;
+    max-height: 60vw;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px #0009;
+    background: #000;
+    margin-bottom: 18px;
+    outline: none;
+}
+.video-title {
+    color: #e43c4e;
+    font-size: 1.25em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+@media (max-width: 900px) {
+    .main-video {
+        width: 98vw;
+        height: 58vw;
+        min-height: 200px;
+        border-radius: 10px;
+    }
+    .single-video-card {
+        padding: 12px 0 10px 0;
+    }
+}
+
+footer {
+    text-align: center;        /* 文字居中 */
+    padding: 12px;
+    background: #1a1a1a;       /* 和网页背景色一致 */
+    color: #fff;
+    font-size: 0.9em;
+}
